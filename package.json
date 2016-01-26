@@ -1,0 +1,19 @@
+{
+  "name": "chat",
+  "version": "1.0.0",
+  "description": "Chat de prueba ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ronald75/chat.git"
+  },
+  "author": "Ronald aprendiendo NodeJs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ronald75/chat/issues"
+  },
+  "homepage": "https://github.com/ronald75/chat#readme"
+}
