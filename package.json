@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/ronald75/chat/issues"
   },
-  "homepage": "https://github.com/ronald75/chat#readme"
+  "homepage": "https://github.com/ronald75/chat#readme",
+  "dependencies": {
+    "st": "^1.1.0"
+  }
 }
