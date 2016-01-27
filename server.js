@@ -11,8 +11,13 @@ server.on('listening',onListening);
 server.listen(port);
 
 function onRequest(req,res){
-	let file =fs.readFileSync("public/index.html");  //nunca!! se debe utilizar metodos sincronos para leer archivos
-	res.end(file);
+	fs.readFile("public/index.html",function(err,file){  
+		if (err){
+			return res.end(err.message);
+		}
+		res.end(file);	
+});  
+	
 }
 
 function onListening(){
