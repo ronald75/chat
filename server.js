@@ -13,13 +13,13 @@ server.listen(port);
 
 function onRequest(req,res){
 	let filename = path.join(__dirname,"public","index.html");
-	fs.readFile(filename,function(err,file){  
-		if (err){
-			return res.end(err.message);
-		}
-		res.end(file);	
-});  
-	
+
+	res.setHeader('Content-Type','text/html');
+	let rs = fs.createReadStream(filename);   // se define el stream de lectura
+	rs.pipe(res);
+	rs.on('error',function(err){
+		rs.end(err.message);
+	})
 }
 
 function onListening(){
