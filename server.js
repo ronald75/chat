@@ -2,6 +2,7 @@
 
 const http = require('http');
 const fs = require('fs');
+const path = require('path');
 const port = process.env.PORT || 8080;
 
 const server=http.createServer();
@@ -11,7 +12,8 @@ server.on('listening',onListening);
 server.listen(port);
 
 function onRequest(req,res){
-	fs.readFile("public/index.html",function(err,file){  
+	let filename = path.join(__dirname,"public","index.html");
+	fs.readFile(filename,function(err,file){  
 		if (err){
 			return res.end(err.message);
 		}
